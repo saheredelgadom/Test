@@ -1,4 +1,5 @@
-// Redirect_js.js
+// redirect_js.js
 
-// Redirecciona a una URL específica
-window.location.href = "https://m0nd696vo5tea8bj3mpp9r5p6gc702or.oastify.com";
+// Este script redirige al usuario a una URL específica para demostrar una vulnerabilidad de redireccionamiento
+// Usamos un dominio de prueba para evitar causar daño real.
+window.location.href = "https://example.com";
