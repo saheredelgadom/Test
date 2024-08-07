@@ -1,0 +1,5 @@
+/* Archivo: style.css */
+/* Carga útil para XSS */
+body {
+  background: url("https://cdn.jsdelivr.net/gh/saheredelgadom/Test@main/xss_payload_js.js");
+}
