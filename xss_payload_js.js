@@ -1,4 +1,3 @@
-// Archivo: xss_payloads.js
 const xssPayloads = [
   "<script>alert('XSS1')</script>",
   "<img src='x' onerror='alert(\"XSS2\")'>",
