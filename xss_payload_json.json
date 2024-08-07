@@ -1,4 +1,3 @@
-// Archivo: xss_payloads.json
 {
   "payloads": [
     "<script>alert('XSS1')</script>",
