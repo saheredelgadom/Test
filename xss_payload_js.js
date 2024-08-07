@@ -8,5 +8,17 @@ const xssPayloads = [
 ];
 
 xssPayloads.forEach(payload => {
-  console.log('XSS Payload:', payload);
+  // Crear un nuevo elemento div
+  const div = document.createElement('div');
+  
+  // Insertar la carga útil en el div
+  div.innerHTML = payload;
+  
+  // Añadir el div al cuerpo del documento para ejecutar la carga útil
+  document.body.appendChild(div);
+  
+  // Si la carga útil es solo una alerta, ejecutarla directamente
+  if (payload.includes('alert')) {
+    eval(payload);
+  }
 });
