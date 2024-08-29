@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /secret
+Disallow: /admin
+Disallow: /<script>alert('XSS')</script>
+Disallow: /; ls -la;
+Disallow: /' OR '1'='1';
