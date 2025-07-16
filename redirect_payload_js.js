@@ -2,4 +2,4 @@
 
 // Este script redirige al usuario a una URL específica para demostrar una vulnerabilidad de redireccionamiento
 // Usamos un dominio de prueba para evitar causar daño real.
-window.location.href = "http://6v2mfhy614bztfwiq7e4p2sef5lw9xxm.oastify.com";
+window.location.href = "http://d0srgcp2g6i6c3nk11fgtwzj8cd39r1ay.oast.online";
